@@ -19,7 +19,9 @@ function Heading() {
                     <button className={styles.btn}> Login </button>
                 </div>
                 <div className={styles.arrow}>
+                    <a href="#about" className={styles.hero}>
                     <FontAwesomeIcon icon={faChevronDown} size="3x" beatFade  />
+                    </a>
                 </div>
             </div>
         </div>

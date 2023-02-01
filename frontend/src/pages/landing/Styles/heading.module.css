@@ -55,9 +55,15 @@
 .btn:hover{
     transform:scale(1.04);
     transition-duration: 0.5s;
-    background-color: rgb(241, 108, 124)
+    background-color: rgb(241, 108, 124);
+    /* border: rgb(232,107,121) solid 2px; */
+    /* text-decoration: underline; */
+    
 }
 .arrow{
     padding-top: 2rem;
     padding-left: 4.5vw;
+}
+.hero{
+    color: rgb(72, 64, 86);
 }

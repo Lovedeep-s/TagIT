@@ -3,6 +3,7 @@ import styles from "../Styles/faq.module.css"
 import myimg from "../Assets/fag.jpg"
 function Faq() {
     return (
+        <section id="faq">
         <div className={styles.container}>
 
             <div class={styles.box}>
@@ -18,7 +19,7 @@ function Faq() {
                             color: 'rgb(232,107,121)',
                             borderColor: 'rgb(232,107,121)',
                             height: '0.1px',
-                            width: '80%',
+                            width: '90%',
                         }}
                     />
                     <div className={styles.text}>
@@ -40,6 +41,7 @@ function Faq() {
 
             </div>
         </div>
+        </section>
     );
 }
 

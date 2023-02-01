@@ -52,8 +52,14 @@
     padding-bottom: 0rem;
     font-weight: 500;
     font-size: 20px;
+    
     letter-spacing: 0.045em;
     text-align: center;
+}
+.navLinks:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+    text-decoration: underline ;
 }
 @media (max-width: 768px) {
     .navbarContainer {

@@ -1,15 +1,14 @@
-import image from "./Assets/suitcase_bg.jpg"
+import Heading from "./Components/heading";
+import About from "./Components/about";
+import Footer from "./Components/footer";
+import Faq from "./Components/faq"
 function Landing() {
   return (
-    <div style={{
-      backgroundImage: `url(${image})`, backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      height: '100vh'
-    }}>
-
-
-
+    <div>
+      <Heading/>
+      <About/>
+      <Faq/>
+      <Footer/>
     </div>
   );
 }

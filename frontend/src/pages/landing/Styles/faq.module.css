@@ -1,0 +1,40 @@
+.container {
+    width:60vw;
+    text-align: center;
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-family: "Montserrat";
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(72, 64, 86);
+    /* color: rgb(93, 226, 93); */
+}
+.box {
+   display : flex;
+  flex-direction : row;
+  padding-bottom: 2rem;
+  /* padding: 1rem 0rem; */
+   
+}
+.boxRow1 {
+    background:transparent;
+    color:white;
+    padding-right: 2rem;
+ }
+.boxRow2 {
+    background:transparent;
+    /* text-align:justify */
+    padding-left: 2rem;
+}
+.heading{
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: rgb(72, 64, 86);
+    margin: 0;
+    padding-bottom: 10px;
+}
+.text{
+    text-align: left;
+}

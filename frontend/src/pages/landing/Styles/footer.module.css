@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+.footer{
+  margin-top: 0rem;
+  padding: 0.05rem;
+  background-color: #fde3d2;
+  background-color: #ebe9da;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Montserrat';
+  }
+.footerGrid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.fGridElement{
+  color: rgb(63, 61, 61);
+  margin: 2rem;
+}
+.fHeading{
+  margin: 0rem;
+}
+.fHrStyle{
+  background: rgb(232,107,121);
+  color: rgb(232,107,121);
+  border-color:rgb(232,107,121);
+  height:0.1px;
+  width: 140px;
+  display: inline-block;
+  margin-top: 0rem;
+}
+.fLink{
+  margin: 0.5rem;
+}
+.fLink a{
+  color: rgb(63, 61, 61);
+  text-decoration: none;
+}
+.fPara{
+  max-width: 400px;
+}
+.fContact{
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
+.pNo {
+  font-size: 12px;
+}
+.pNo p{
+  margin: 0rem;
+}
+.finisher{
+  font-size: 12px;
+  color: rgb(63, 61, 61);
+  margin-bottom: 2rem;
+}

@@ -48,10 +48,36 @@
     /* background-color: #fa745d; */
     border: none;
 }
+.btn1 {
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    max-width: 800px;
+    color: rgb(72, 64, 86);
+    padding-top:0.75rem;
+    padding-bottom:0.75rem;
+    padding-right:3rem;
+    padding-left:3rem;
+    border-radius: 2rem;
+    background-color: rgb(252, 216, 219);
+    /* background-color: #fa745d; */
+    border: none;
+}
+.btn1:hover{
+    transform:scale(1.04);
+    transition-duration: 0.5s;
+    background-color: rgb(251, 226, 228);
+    
+}
+.hero{
+    display: flex;
+}
 .btnContainer{
     padding-top: 1.8rem;
-    /* padding-left: 2.5vw; */
+    padding-right: 1rem;
 }
+
 .btn:hover{
     transform:scale(1.04);
     transition-duration: 0.5s;

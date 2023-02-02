@@ -15,8 +15,13 @@ function Heading() {
                         Find your missing luggage<br /> Anytime! Anywhere!
                     </div>
                 </div>
+                <div className={styles.hero}>
                 <div className={styles.btnContainer}>
                     <button className={styles.btn}> Login </button>
+                </div>
+                <div className={styles.btnContainer}>
+                    <button className={styles.btn1}> SignUp </button>
+                </div>
                 </div>
                 <div className={styles.arrow}>
                     <a href="#about" className={styles.hero}>

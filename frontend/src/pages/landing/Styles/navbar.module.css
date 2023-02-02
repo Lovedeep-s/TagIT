@@ -61,6 +61,30 @@
     transition-duration: 0.4s;
     text-decoration: underline ;
 }
+/* .signup{
+    background-color: rgb(232,107,121);
+    border-radius: 30px;
+    padding: 0.2rem 0.2rem;
+    
+} */
+.navLinks1{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin: 0;
+    padding-top: 0px;
+    height: 100%;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 0rem;
+    font-weight: 500;
+    font-size: 20px;
+    
+    letter-spacing: 0.045em;
+    text-align: center;
+}
 @media (max-width: 768px) {
     .navbarContainer {
         justify-content: center;

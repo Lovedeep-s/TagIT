@@ -20,6 +20,11 @@ function Navbar() {
               FAQs
             </a>
           </div>
+          {/* <div className={styles.signup}>
+            <a className={styles.navLinks1} href="/signup">
+              Sign-Up
+            </a>
+          </div> */}
         </div>
       </div>
     </nav>

@@ -1,7 +1,4 @@
 import styles from "../Styles/content.module.css"
-import myimg from "../Assets/persons3.svg"
-import leftimg from "../Assets/left.svg"
-import rightimg from "../Assets/right.svg"
 import React, { useState, useContext } from "react";
 
 // import Navbar from "./navbar";
@@ -10,15 +7,15 @@ function Content() {
     return (
         <div className={styles.flexCont}>
             <div className={styles.container}>
-                <div className={styles.left} id="left">
+                {/* <div className={styles.left} id="left">
                     <img
                         src={rightimg}
                         style={{ height: 350, width: 170 }}
                         alt="website logo"
                     />
-                </div>
+                </div> */}
                 <div className={styles.middle} id="middle">
-                    <h1 className={styles.heading}>Sign Up !</h1>
+                    <h1 className={styles.heading}>Enter QR Details !</h1>
                     <hr
                         style={{
                             background: 'rgb(232,107,121)',

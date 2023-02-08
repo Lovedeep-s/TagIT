@@ -43,7 +43,7 @@ function Content() {
                                         autoComplete="off"
                                         // value={email}
                                         // onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Name "
+                                        placeholder=" QR Name "
                                         className={styles.inputBox}
                                     />
                                 </div>
@@ -51,46 +51,21 @@ function Content() {
                                 <div className={styles.inputBoxContainer}>
                                     <input
                                         type="text"
-                                        name="email"
-                                        id="email"
+                                        name="desc"
+                                        id="desc"
                                         autoComplete="off"
                                         // value={email}
                                         // onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="Email "
+                                        placeholder="Description "
                                         className={styles.inputBox}
                                     />
                                 </div>
-                                <br />
-                                <div className={styles.inputBoxContainer}>
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        id="password"
-                                        autoComplete="off"
-                                        // value={password}
-                                        // onChange={(e) => setPassword(e.target.value)}
-                                        placeholder="Password"
-                                        className={styles.inputBox}
-                                    />
-                                </div>
-                                <br />
-                                <div className={styles.inputBoxContainer}>
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        id="password"
-                                        autoComplete="off"
-                                        // value={password}
-                                        // onChange={(e) => setPassword(e.target.value)}
-                                        placeholder="Confirm Password"
-                                        className={styles.inputBox}
-                                    />
-                                </div>
+                               
                                 <div className={styles.btnContainer} >
                                     {
                                         !loading &&
                                         <button type="submit" className={styles.btn}>
-                                            <div className={styles.btntext}>Submit</div>
+                                            <div className={styles.btntext}>Generate QR</div>
                                         </button>
                                     }
 

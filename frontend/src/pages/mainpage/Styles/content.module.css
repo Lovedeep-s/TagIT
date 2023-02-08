@@ -109,7 +109,7 @@ input[type=password], select {
 }
 .left{
   padding-right:30px;
-  padding-top:5rem;
+  padding-top:2rem;
   /* vertical-align: bottom; */
 }
 .btn:hover{

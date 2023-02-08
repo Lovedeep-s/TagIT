@@ -1,5 +1,5 @@
 .container {
-    width:60vw;
+    width:70vw;
     text-align: center;
     margin: auto;
     padding-top: 4rem;
@@ -37,4 +37,7 @@
 }
 .text{
     text-align: left;
+}
+.check{
+    color: rgb(232,107,121);
 }

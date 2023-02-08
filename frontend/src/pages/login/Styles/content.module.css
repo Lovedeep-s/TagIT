@@ -2,14 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Josefin+Sans:ital,wght@0,400;1,300;1,500&display=swap');
 
 .flexCont{
-    height:100vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../Assets/bg2.jpg");
+  height:100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  
+}
+.big{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../Assets/bg2.jpg") ;
+}
+.arrow{
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color:rgb(72, 64, 86);;
 }
 .loginContainer{
   align-items: center;

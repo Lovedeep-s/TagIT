@@ -4,7 +4,7 @@ function Previous(){
         <section id="previous">
         <div className={styles.flexCont}>
             <div className={styles.heading}>
-            Previously Generated QRs
+                Previously Generated QRs
             </div>
             
         </div>

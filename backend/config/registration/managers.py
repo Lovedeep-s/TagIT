@@ -5,12 +5,13 @@ class UserManager(BaseUserManager):
     Custom User Manager to use email as unique identifier
     """
 
-    def create_user(self, email, password=None):
+    def create_user(self, email, phone, password=None):
         if not email:
             raise ValueError("Email required")
 
         user = self.model(
             email=email,
+            phone=phone,
         )
         user.is_active = True
         user.set_password(password)

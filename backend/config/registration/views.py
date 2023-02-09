@@ -10,7 +10,13 @@ from rest_framework.authtoken.models import Token
 
 from .models import User
 
-class RegisterView(APIView):
+import io
+from PIL import Image
+import qrcode
+import cloudinary, cloudinary.uploader, cloudinary.api
+config=cloudinary.config(secure=True)
+
+class register(APIView):
     def post(self, request, *args, **kwargs):
         email = request.data.get('email')
         password = request.data.get('password')
@@ -18,7 +24,41 @@ class RegisterView(APIView):
         if email is None or password is None:
             return Response({'error': 'Please provide both email and password'},
                             status=status.HTTP_400_BAD_REQUEST)
-        user = User.objects.create_user(email, password, phone)
+        user = User.objects.create_user(email,phone,password)
         user.save()
-        token = Token.objects.create(user=user)
-        return Response({'token': token.key},status=status.HTTP_201_CREATED)
+        
+        return Response({'status':'success'},status=status.HTTP_201_CREATED)
+class login(APIView):
+    def post(self, request):
+        email = request.data.get('email')
+        password = request.data.get('password')
+       
+        print(email,password)
+        print()
+        
+        user = authenticate(request, email=email, password=password)
+
+        if user is None:
+            print("lol")
+            return Response({'error': 'Invalid Credentials'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        token = Token.objects.get_or_create(user=user)
+
+        data = {
+            'key': token[0].key,
+            'email': user.email,
+        }
+
+        return Response(data, status=status.HTTP_200_OK)
+
+# def index(request):
+#     qr=qrcode.make('www.google.com')
+#     stream = io.BytesIO()
+#     qr.save(stream, format="PNG")
+#     qr_bytes=qr_bytes = stream.getvalue()
+#     cloudinary.uploader.upload(qr_bytes, public_id="hehe_qr", unique_filename = False, overwrite=True, folder="TagIt")
+    
+#     return render(request,"<h1>hello</h1>")
+
+def check(request):
+    return render (request,'1.html')

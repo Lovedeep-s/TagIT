@@ -6,6 +6,7 @@ import Signup from "./pages/signup/index.js";
 import Products from "./pages/products/index.js";
 import MainPage from "./pages/mainpage/index.js";
 import Supplier from "./pages/supplier/index.js";
+import Payment from "./pages/payment/index.js";
 import { Navigate } from "react-router-dom";
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/mainpage" element={<MainPage/>}></Route>
           <Route path="/products" element={<Products/>}></Route>
           <Route path="/supplier" element={<Supplier/>}></Route>
+          <Route path="/payment" element={<Payment/>}></Route>
           {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
       </Router>

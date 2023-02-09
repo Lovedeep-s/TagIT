@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Josefin+Sans:ital,wght@0,400;1,300;1,500&display=swap');
+.flexCont{
+  height:100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  
+  
+}
 .big{
   background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height:100vh;
-    background-image: url("../Assets/bg2.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../Assets/bg2.jpg") ;
 }
-/* .sticky{
-  position: f;
-} */
-.flexCont{
-    height:100vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    
+.arrow{
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color:rgb(72, 64, 86);;
 }
 .right{
   padding: 30px;
-}
-.left{
-  padding:30px
 }
 .loginContainer{
   align-items: center;
@@ -109,11 +109,6 @@ input[type=password], select {
   font-size: 17px;
   background-color: rgb(232,107,121);
   
-}
-.left{
-  padding-right:30px;
-  padding-top:2rem;
-  /* vertical-align: bottom; */
 }
 .btn:hover{
     transform:scale(1.04);

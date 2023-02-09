@@ -9,7 +9,9 @@ function Content() {
     return (
         <section id="home">
             <div className={styles.big}>
+                <div className={styles.sticky}>
                 <Nav1 />
+                </div>
                 <div className={styles.flexCont}>
                     <div className={styles.container}>
                         <div className={styles.left} id="left">

@@ -25,9 +25,9 @@ function Navbar() {
               Become a Supplier
             </a>
           </div>
-          {/* <div className={styles.signup}>
-            <a className={styles.navLinks1} href="/signup">
-              Sign-Up
+          {/* <div>
+            <a className={styles.navLinks} href="/mainpage">
+              DashBoard
             </a>
           </div> */}
         </div>

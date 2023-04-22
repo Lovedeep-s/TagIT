@@ -5,7 +5,7 @@ function MainPage(){
     return (
         <div>
             <Content/>
-            <Previous/>
+            {/* <Previous/> */}
         </div>
     );
 }

@@ -1,11 +1,74 @@
 import styles from "../Styles/content.module.css"
-import React, { useState, useContext } from "react";
+import React, { useState, useContext,useRef,useEffect } from "react";
 import Nav1 from "./navbar";
 import img from "../Assets/qr.png"
 
-// import Navbar from "./navbar";
+
 function Content() {
     const [loading, setLoading] = useState(false);
+    
+    class myqrcodes {
+        constructor(url, status) {
+            this.url = url;
+            this.status = status;
+        }
+    }
+
+    // function submitForm(){
+    // useEffect(() => {
+    //     const fetchData = () => {
+    //         return fetch("http://127.0.0.1:8000/check_status/", { method: "GET" })
+    //             .then(res => {
+    //                 return res.json();
+    //             })
+    //             .then((data) => {
+    //                 setQrcodes([]);
+    //                 console.log(data);
+    //                 let qr = new myqrcodes(data.url,data.status);
+    //                 setQrcodes(classRooms => [...classRooms, qr]);
+    //             })
+    //     };
+    //     fetchData();
+    // }, []);
+    // }
+    const [qrcodes, setQrcodes] = useState([]);
+  const [name, setName] = useState("");
+  const [qr, setQr] = useState("");
+  const [description, setDescription] = useState("");
+  const [status,setStatus]=useState("");
+  const [message, setMessage] = useState("");
+
+  let handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await fetch("https://tagit-z7n8.onrender.com/generate/", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          description: description,
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+  
+      let resJson = await res.json();
+      if (res.status === 200) {
+        console.log(resJson);
+        let qr = { url: resJson.url, status: resJson.status };
+        setQrcodes((qrcodes) => [...qrcodes, qr]);
+        setName("");
+        setDescription("");
+        setMessage("QR code generated successfully");
+      } else {
+        setMessage("Some error occurred");
+      }
+    } catch (err) {
+      console.log(err);
+      setMessage("Some error occurred");
+    }
+  };
+  
     return (
         <section id="home">
             <div className={styles.big}>
@@ -34,7 +97,7 @@ function Content() {
                             />
                             <form
                                 action=""
-                                // onSubmit={submitForm}
+                                onSubmit={handleSubmit}
                                 className={styles.formContainer}
                             >
                                 <div className={styles.inputBoxContainer}>
@@ -43,8 +106,8 @@ function Content() {
                                         name="name"
                                         id="name"
                                         autoComplete="off"
-                                        // value={email}
-                                        // onChange={(e) => setEmail(e.target.value)}
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                         placeholder=" QR Name "
                                         className={styles.inputBox}
                                     />
@@ -56,8 +119,8 @@ function Content() {
                                         name="desc"
                                         id="desc"
                                         autoComplete="off"
-                                        // value={email}
-                                        // onChange={(e) => setEmail(e.target.value)}
+                                        value={description}
+                                        onChange={(e) => setDescription(e.target.value)}
                                         placeholder="Description "
                                         className={styles.inputBox}
                                     />

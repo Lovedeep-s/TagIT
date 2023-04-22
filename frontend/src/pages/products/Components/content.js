@@ -2,6 +2,9 @@ import styles from "../Styles/content.module.css"
 import React, { useState, useContext } from "react";
 import Nav1 from "./navbar";
 import img from "../Assets/qr.png";
+import img2 from "../Assets/key.jpg";
+import img3 from "../Assets/card.jpg";
+import img4 from "../Assets/sticker.jpg";
 
 function Content() {
     return (
@@ -10,20 +13,20 @@ function Content() {
                 <Nav1 />
                 <div className={styles.picturegrid}>
                     <div className={styles.picturegriditem}>
-                        <img src={img} alt="Picture 1" />
-                        <div className={styles.picturetitle}>Product 1</div>
+                        <img src={img} alt="QR CODES" />
+                        <div className={styles.picturetitle}>QR CODES</div>
                     </div>
                     <div className={styles.picturegriditem}>
-                        <img src={img} alt="Picture 2" />
-                        <div className={styles.picturetitle}>Product 2</div>
+                        <img src={img2} alt="KEY CHAINS" />
+                        <div className={styles.picturetitle}>KEY CHAINS</div>
                     </div>
                     <div className={styles.picturegriditem}>
-                        <img src={img} alt="Picture 3" />
-                        <div className={styles.picturetitle}>Product 3</div>
+                        <img src={img4} alt="STICKERS" />
+                        <div className={styles.picturetitle}>STICKERS</div>
                     </div>
                     <div className={styles.picturegriditem}>
-                        <img src={img} alt="Picture 4" />
-                        <div className={styles.picturetitle}>Product 4</div>
+                        <img src={img3} alt="CARDS" />
+                        <div className={styles.picturetitle}>CARDS</div>
                     </div>
                 </div>
             </div>

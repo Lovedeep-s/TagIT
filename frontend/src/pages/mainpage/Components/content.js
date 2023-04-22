@@ -15,12 +15,13 @@ function Content() {
   const [qr, setQr] = useState("");
   const [description, setDescription] = useState("");
   const [status,setStatus]=useState("");
+  const [url,setUrl]=useState("");
   const [message, setMessage] = useState("");
 
   const [qrs, setQrs] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://tagit-z7n8.onrender.com/auth/generate/", {
+    fetch("https://tagit-z7n8.onrender.com/generate/", {
       method: "POST",
       body: JSON.stringify({
         name:name,
@@ -34,6 +35,8 @@ function Content() {
       .then((response) => {
         setQrs((qrs) => [response, ...qrs]);
         console.log(response);
+        setUrl(response.url);
+        setStatus(response.status);
         setDescription("");
         setName("");
         console.log('cnajkfn')

@@ -1,52 +1,30 @@
+import styles from "../Styles/content.module.css";
+import rightimg from "../Assets/key.svg";
+import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowLeft,
+  faArrowLeftLong,
+} from "@fortawesome/free-solid-svg-icons";
 
-import { useState } from "react";
 
 function Content() {
   
-
-  const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-
-//   let handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       let res = await fetch("https://tagit-z7n8.onrender.com/generate/", {
-//         method: "POST",
-//         body: JSON.stringify({
-//             email: email,
-//             password: password,
-//             phone: phone,
-  
-//         }),
-//       });
-//       let resJson = await res.json();
-//       if (res.status === 200) {
-//         setPhone("");
-//         setPassword("");
-//         setEmail("");
-//         console.log('cnajkfn')
-//         setMessage("User created successfully");
-//       } else {
-//         setMessage("Some error occured");
-//       }
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
 const [posts, setPosts] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('https://tagit-z7n8.onrender.com/register/', {
+    fetch('https://tagit-z7n8.onrender.com/auth/register/', {
        method: 'POST',
         body: JSON.stringify({
         email: email,
         password: password,
         phone: phone,
-        //   userId: Math.random().toString(36).slice(2),
        }),
        headers: {
           'Content-type': 'application/json; charset=UTF-8',
@@ -60,7 +38,7 @@ const [posts, setPosts] = useState([]);
         setPhone("");
         setPassword("");
         // console.log('cnajkfn')
-        console.log("User created successfully");
+        setMessage("User created successfully");
        })
        .catch((err) => {
           console.log(err.message);
@@ -68,32 +46,92 @@ const [posts, setPosts] = useState([]);
  };
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
-    
-        <input
-          type="text"
-          value={email}
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="text"
-          value={password}
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <input
-          type="text"
-          value={phone}
-          placeholder="Mobile Number"
-          onChange={(e) => setPhone(e.target.value)}
-        />
-
-        <button type="submit">Create</button>
-
-      </form>
+    <div className={styles.big}>
+    <div className={styles.arrow}>
+      <Link
+        to="/"
+        style={{ color: "rgb(72, 64, 86)", textDecoration: "none" }}
+      >
+        {" "}
+        <FontAwesomeIcon icon={faArrowLeftLong} size="3x" beatFade />
+      </Link>
     </div>
+    <div className={styles.flexCont}>
+      <div className={styles.container}>
+        <div className={styles.left} id="left">
+          <img
+            src={rightimg}
+            style={{ height: 380, width: 350 }}
+            alt="website logo"
+          />
+        </div>
+        <div className={styles.middle} id="middle">
+          <h1 className={styles.heading}>Sign Up !</h1>
+          <hr
+            style={{
+              background: "rgb(232,107,121)",
+              color: "rgb(232,107,121)",
+              borderColor: "rgb(232,107,121)",
+              height: "0.1px",
+              width: "80%",
+            }}
+          />
+          <form
+            action=""
+            onSubmit={handleSubmit}
+            className={styles.formContainer}
+          >
+            <div className={styles.inputBoxContainer}>
+              <input
+                name="email"
+                id="email"
+                className={styles.inputBox}
+
+                type="text"
+                value={email}
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <br />
+            <div className={styles.inputBoxContainer}>
+              <input
+                name="phone"
+                id="phone"
+                className={styles.inputBox}
+                
+                type="text"
+                value={phone}
+                placeholder="Phone Number"
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
+            <br />
+            <div className={styles.inputBoxContainer}>
+              <input
+                name="password"
+                id="password"
+                className={styles.inputBox}
+                
+                type="text"
+                value={password}
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <br />
+            <div className={styles.btnContainer}>
+                <button type="submit" className={styles.btn}>
+                  <div className={styles.btntext}>Submit</div>
+                </button>
+            </div>
+            <div className={styles.heading}>{message ? <p>{message} <a href="/login">Login Now</a></p>    : null}</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   );
 }
 

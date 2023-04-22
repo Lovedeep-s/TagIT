@@ -129,11 +129,7 @@ function Content() {
                             } */}
                             </div>
                         </form>
-                        <img
-                            src={myimg}
-                            style={{ height: 200, width: 300 }}
-                            alt="website logo"
-                        />
+                        
 
                     </div>
                 </div>

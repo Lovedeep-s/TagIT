@@ -18,25 +18,15 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/* <Route exact path="/" element={<Landing />}></Route>
+          <Route exact path="/" element={<Landing />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/mainpage" element={<MainPage/>}></Route>
           <Route path="/supplier" element={<Supplier/>}></Route>
-          <Route path="/payment" element={<Payment/>}></Route> */}
-          {/* <Route path="*" element={<Navigate to="/" />} /> */}
-          {!authCtx.isLoggedIn && <Route path="/login" element={<Login />} />}
-          {<Route exact path="/" element={<Landing />} />}
-          {<Route path="/signup" element={<Signup />} />}
-          {<Route path="/supplier" element={<Supplier />} />}
-          {<Route path="/profile" element={<Profile />} />}
-          {<Route path="/products" element={<Products />} />}
-          {/* {<Route path="/mainpage" element={<MainPage />} />} */}
-          {/* {<Route path="/payment" element={<Payment />} />} */}
-          {authCtx.isLoggedIn && <Route path="/mainpage" element={<MainPage />} />}
-          {authCtx.isLoggedIn && <Route path="/payment" element={<Payment />} />}
-          {!authCtx.isLoggedIn && <Route path="/mainpage" element={<Signup />} />}
-          {authCtx.isLoggedIn && <Route exact path="*" element={<Landing />} />}
+          <Route path="/payment" element={<Payment/>}></Route>
+          <Route path="/profile" element={<Profile/>}></Route>
+          <Route path="/products" element={<Products/>}></Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </div>

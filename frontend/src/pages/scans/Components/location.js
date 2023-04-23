@@ -6,18 +6,21 @@ import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 
 function Location(props) {
   const [locations, setLocations] = useState([]);
-  const [key, setKey] = useState("");
+  // const [key, setKey] = useState("");
   const params = useParams();
-
-  useEffect(() => {
-    setKey(params.id);
-  }, [params.id]);
+  let key =params.id;
+  // useEffect(() => {
+  //   setKey(params.id);
+  // }, [params.id]);
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = () => {
+    if (!key) {
+      return; // don't send the request if key is empty
+    }
     fetch("https://tagit.ccstiet.com/history/", {
       method: "POST",
       body: JSON.stringify({
@@ -45,7 +48,7 @@ function Location(props) {
     <section id="previous">
       <div className={styles.arrow}>
         <Link
-          to="/mainpage"
+          to="/myqrs"
           style={{ color: "rgb(72, 64, 86)", textDecoration: "none" }}
         >
           <FontAwesomeIcon icon={faArrowLeftLong} size="3x" beatFade />
@@ -57,7 +60,7 @@ function Location(props) {
         </div>
         <center>
           <div>
-            {locations.length > 0 && (
+            {key && locations.length > 0 && (
               <div className={styles.flexContainer}>
                 {locations.map((location) => (
                   <div className={styles.container}>

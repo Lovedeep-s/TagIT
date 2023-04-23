@@ -54,7 +54,7 @@ function Previous() {
             <div>
             <p className={styles.qrName}>{i++}:  {qr.name} </p>
             <p className={styles.qrName1}>{qr.description} </p>
-            <a className={styles.btn} href={qr.qr} target="_blank" >Download Qr</a>
+            <p><a className={styles.btn} href={qr.qr} target="_blank"  >Download Qr</a><br></br></p>
             <button className={styles.btn} onClick={() => openprofile(qr.key)}>See Scanning History</button><br/><br/>
             </div>
             <img src={qr.qr}  width="170" height="170"/>

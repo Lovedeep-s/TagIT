@@ -62,6 +62,7 @@
   color:white;
   font-size: 13px;
   background-color: rgb(232,107,121);
+  text-decoration: none;
 }
 .btn:hover{
   background-color: rgb(249, 148, 160);

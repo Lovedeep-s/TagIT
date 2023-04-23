@@ -9,11 +9,8 @@ import Payment from "./pages/payment/index.js";
 import Scans from "./pages/scans/index.js";
 import Profile from "./pages/profile/index.js";
 import Products from "./pages/products/index.js";
-<<<<<<< HEAD
 import Cart from "./pages/cart/index.js";
-=======
 import QrLists from "./pages/previous/index.js";
->>>>>>> f201de7196b47f53ac4d04cfc283649217148500
 import { Navigate } from "react-router-dom";
 
 import AuthContext from "./store/auth-context";

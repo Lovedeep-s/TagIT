@@ -6,9 +6,14 @@ import Signup from "./pages/signup/index.js";
 import MainPage from "./pages/mainpage/index.js";
 import Supplier from "./pages/supplier/index.js";
 import Payment from "./pages/payment/index.js";
+import Scans from "./pages/scans/index.js";
 import Profile from "./pages/profile/index.js";
 import Products from "./pages/products/index.js";
+<<<<<<< HEAD
 import Cart from "./pages/cart/index.js";
+=======
+import QrLists from "./pages/previous/index.js";
+>>>>>>> f201de7196b47f53ac4d04cfc283649217148500
 import { Navigate } from "react-router-dom";
 
 import AuthContext from "./store/auth-context";
@@ -25,6 +30,8 @@ function App() {
           <Route path="/mainpage" element={<MainPage/>}></Route>
           <Route path="/supplier" element={<Supplier/>}></Route>
           <Route path="/payment" element={<Payment/>}></Route>
+          <Route path="/myqrs" element={<QrLists/>}></Route>
+          <Route path="/scans" element={<Scans/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/products" element={<Products/>}></Route>
           <Route path="/cart" element={<Cart />}></Route>

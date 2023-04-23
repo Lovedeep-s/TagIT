@@ -1,26 +1,17 @@
 import styles from "../Styles/content.module.css";
-import React, { useState, useContext, useRef, useEffect } from "react";
+import React, { useState} from "react";
 import Nav1 from "./navbar";
 import img from "../Assets/qr.png";
 
 function Content() {
-  class myqrcodes {
-    constructor(url, status) {
-      this.url = url;
-      this.status = status;
-    }
-  }
-  const [qrcodes, setQrcodes] = useState([]);
   const [name, setName] = useState("");
-  const [qr, setQr] = useState("");
   const [description, setDescription] = useState("");
   const [status,setStatus]=useState("");
   const [url,setUrl]=useState("");
   const [message, setMessage] = useState("");
 
-  const [qrs, setQrs] = useState([]);
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     fetch("https://tagit-z7n8.onrender.com/generate/", {
       method: "POST",
       body: JSON.stringify({
@@ -33,13 +24,11 @@ function Content() {
     })
       .then((res) => res.json())
       .then((response) => {
-        setQrs((qrs) => [response, ...qrs]);
         console.log(response);
         setUrl(response.url);
         setStatus(response.status);
         setDescription("");
         setName("");
-        console.log('cnajkfn')
         setMessage("QR generated successfully");
       })
       .catch((err) => {
@@ -109,6 +98,7 @@ function Content() {
                       <div className={styles.btntext}>Generate QR</div>
                     </button>
                 </div>
+                <div className={styles.heading}>{message ? <p>{message} <a href="/previous">My QR list</a></p>    : null}</div>
               </form>
             </div>
           </div>

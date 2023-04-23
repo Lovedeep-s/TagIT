@@ -28,7 +28,7 @@ function App() {
           <Route path="/supplier" element={<Supplier/>}></Route>
           <Route path="/payment" element={<Payment/>}></Route>
           <Route path="/myqrs" element={<QrLists/>}></Route>
-          <Route path="/scans" element={<Scans/>}></Route>
+          <Route path="/scans/:id" element={<Scans/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/products" element={<Products/>}></Route>
           <Route path="/cart" element={<Cart />}></Route>

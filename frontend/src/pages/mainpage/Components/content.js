@@ -9,10 +9,11 @@ function Content() {
   const [status,setStatus]=useState("");
   const [url,setUrl]=useState("");
   const [message, setMessage] = useState("");
+  const [imgurl,setImgurl]=useState(img);
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
-    fetch("https://tagit-z7n8.onrender.com/generate/", {
+    fetch("https://tagit.ccstiet.com/generate/", {
       method: "POST",
       body: JSON.stringify({
         name:name,
@@ -27,6 +28,7 @@ function Content() {
         console.log(response);
         setUrl(response.url);
         setStatus(response.status);
+        setImgurl(response.url)
         setDescription("");
         setName("");
         setMessage("QR generated successfully");
@@ -47,7 +49,7 @@ function Content() {
           <div className={styles.container}>
             <div className={styles.left} id="left">
               <img
-                src={img}
+                src={imgurl}
                 style={{ height: 250, width: 250 }}
                 alt="website logo"
               />
@@ -98,7 +100,7 @@ function Content() {
                       <div className={styles.btntext}>Generate QR</div>
                     </button>
                 </div>
-                <div className={styles.heading}>{message ? <p>{message} <a href="/previous">My QR list</a></p>    : null}</div>
+                <div className={styles.heading}>{message ? <p>{message} <a href="/myqrs">My QR list</a></p>    : null}</div>
               </form>
             </div>
           </div>

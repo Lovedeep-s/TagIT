@@ -1,19 +1,17 @@
 import styles from "../Styles/previous.module.css";
-import { Link } from "react-router-dom";
+import { Link, createSearchParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowLeft,
   faArrowLeftLong,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from"axios";
 
 function Previous() {
-  const url = "https://tagit-z7n8.onrender.com/getQRs/";
+  const url = "https://tagit.ccstiet.com/getQRs/";
   const [qrs, setQrs] = useState([])
-
   const fetchData = () => {
-    fetch("https://tagit-z7n8.onrender.com/getQRs/")
+    fetch("https://tagit.ccstiet.com/getQRs/")
       .then(response => {
         return response.json()
       })
@@ -25,6 +23,13 @@ function Previous() {
   useEffect(() => {
     fetchData()
   }, [])
+
+
+  const navigate = useNavigate();
+
+  const openprofile =(id)=>{
+    navigate("/scans/"+id );
+  }
 
   var i = 1 ;
   return (
@@ -45,13 +50,13 @@ function Previous() {
         {qrs.length > 0 && (
         <div className={styles.flexContainer}>
           {qrs.map(qr => (
-            <div className={styles.container}>
+            <div className={styles.container} key={qr.key}>
             <div>
             <p className={styles.qrName}>{i++}:  {qr.name} </p>
             <p className={styles.qrName1}>{qr.description} </p>
-            <a className={styles.btn} href={qr.qr}>Open On Separate Tab?</a>
+            <a className={styles.btn} href={qr.qr} target="_blank" >Download Qr</a>
+            <button className={styles.btn} onClick={() => openprofile(qr.key)}>See Scanning History</button><br/><br/>
             </div>
-            {/* <a>{qr.qr}</a> */}
             <img src={qr.qr}  width="170" height="170"/>
             </div>
           ))}

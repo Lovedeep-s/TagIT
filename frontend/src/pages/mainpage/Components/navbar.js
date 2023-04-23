@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../Styles/navbar.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenAlt, faPencil, faPencilSquare, faUserCircle, faUserEdit } from '@fortawesome/free-solid-svg-icons'
+import { faPenAlt, faPencil,faUserCircle} from '@fortawesome/free-solid-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 function Products() {
     return (
@@ -11,8 +11,6 @@ function Products() {
                 <a href="/products">Products</a>
                 <a href="/myqrs">My QRs</a>
                 <div className={styles.topnavright}>
-                    {/* <a href="#search">Profile  <FontAwesomeIcon icon={faUserEdit} /></a>
-                    <a href="#about" className={styles.logout}>Log-out</a> */}
                     <div className={styles.dropdown} >
                     <button class={styles.dropbtn}> <FontAwesomeIcon icon={faUserCircle} size="2x" />
                     </button>

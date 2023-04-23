@@ -19,7 +19,7 @@ function Content() {
 const [posts, setPosts] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('https://tagit-z7n8.onrender.com/auth/register/', {
+    fetch('https://tagit.ccstiet.com/auth/register/', {
        method: 'POST',
         body: JSON.stringify({
         email: email,
@@ -37,7 +37,6 @@ const [posts, setPosts] = useState([]);
         setEmail("");
         setPhone("");
         setPassword("");
-        // console.log('cnajkfn')
         setMessage("Registration Complete!");
        })
        .catch((err) => {

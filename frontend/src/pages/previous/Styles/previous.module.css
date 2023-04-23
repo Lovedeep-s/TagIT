@@ -64,11 +64,10 @@
   background-color: rgb(232,107,121);
 }
 .btn:hover{
-  transform:scale(1.04);
-  transition-duration: 0.5s;
-  background-color: rgb(241, 108, 124);
-  
+  background-color: rgb(249, 148, 160);
+ 
 }
 .btntext{
   font-family: "Montserrat";
+  text-decoration: none;
 }

@@ -8,6 +8,7 @@ import Supplier from "./pages/supplier/index.js";
 import Payment from "./pages/payment/index.js";
 import Profile from "./pages/profile/index.js";
 import Products from "./pages/products/index.js";
+import Cart from "./pages/cart/index.js";
 import { Navigate } from "react-router-dom";
 
 import AuthContext from "./store/auth-context";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/payment" element={<Payment/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/products" element={<Products/>}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

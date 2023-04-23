@@ -2,9 +2,9 @@ import styles from "../Styles/content.module.css"
 import React, { useState, useContext } from "react";
 import Nav1 from "./navbar";
 import img from "../Assets/qr.png";
-import img2 from "../Assets/key.jpg";
-import img3 from "../Assets/card.jpg";
-import img4 from "../Assets/sticker.jpg";
+import img2 from "../Assets/key.png";
+import img3 from "../Assets/card3.png";
+import img4 from "../Assets/sticker2.png";   
 
 function Content() {
     return (
@@ -21,13 +21,14 @@ function Content() {
                         <div className={styles.picturetitle}>KEY CHAINS</div>
                     </div>
                     <div className={styles.picturegriditem}>
-                        <img src={img4} alt="STICKERS" />
-                        <div className={styles.picturetitle}>STICKERS</div>
-                    </div>
-                    <div className={styles.picturegriditem}>
                         <img src={img3} alt="CARDS" />
                         <div className={styles.picturetitle}>CARDS</div>
                     </div>
+                    <div className={styles.picturegriditem}>
+                        <img src={img4} alt="STICKERS" />
+                        <div className={styles.picturetitle}>STICKERS</div>
+                    </div>
+                    
                 </div>
             </div>
         </section>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Josefin+Sans:ital,wght@0,400;1,300;1,500&display=swap');
+
+.big {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150vh;
+  background-image: url("../Assets/bg2.jpg");
+}
+
+  .cartcontainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+h2{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+  .cartitems {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  .cartitem {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .cartitem img {
+    width: 50%;
+    margin-right: 1rem;
+  }
+
+  .cartsummary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .cartsummary p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+
+  .button{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    border-radius: 2rem;
+    width: 110%;
+    border: 0px;
+    color:white;
+    font-size: 17px;
+    background-color: rgb(232,107,121);
+    
+  }
+  .button:hover{
+      transform:scale(1.04);
+      transition-duration: 0.5s;
+      background-color: rgb(241, 108, 124);
+      /* border: rgb(232,107,121) solid 2px; */
+      /* text-decoration: underline; */
+      
+  }
+  .buttonContainer{
+    
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .buttontext{
+    /* font-family: "Montserrat"; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+  }

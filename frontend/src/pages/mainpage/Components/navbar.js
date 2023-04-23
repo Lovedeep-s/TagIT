@@ -7,7 +7,7 @@ function Products() {
     return (
         <div className={styles.big}>
             <div className={styles.topnav}>
-                <a className={styles.active} href="#home"> <FontAwesomeIcon icon={faHome} /> </a>
+                <a className={styles.active} href="/landing"> <FontAwesomeIcon icon={faHome} /> </a>
                 <a href="/products">Products</a>
                 <a href="/myqrs">My QRs</a>
                 <div className={styles.topnavright}>

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Josefin+Sans:ital,wght@0,400;1,300;1,500&display=swap');
+.flexCont{
+    
+    text-align: center;
+    align-items: center; 
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    height:100vh;
+    background-image: url("../Assets/bg3.jpg") ;
+    
+}
+.heading{
+  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: "Montserrat"; */
+  font-weight: 500; 
+  font-size: 2rem;
+  padding-top: 3rem;
+  color: rgb(72, 64, 86);
+}
+.arrow{
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color:rgb(72, 64, 86);;
+}
+.container{
+  background-color: rgb(255, 249, 249);
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  width:40vw;
+  margin : 2rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: .5fr 0.5fr;
+  
+}
+.qrName{
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: solid;
+  font-size: 14px;
+}
+.qrName1{
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: solid;
+  font-size: 13px;
+}
+.btn{
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  padding-right:1rem;
+  padding-left:1rem;
+  border-radius: 2rem;
+  border: 0px;
+  color:white;
+  font-size: 13px;
+  background-color: rgb(232,107,121);
+}
+.btn:hover{
+  transform:scale(1.04);
+  transition-duration: 0.5s;
+  background-color: rgb(241, 108, 124);
+  
+}
+.btntext{
+  font-family: "Montserrat";
+}

@@ -2,6 +2,8 @@ import styles from "../Styles/content.module.css"
 import React, { useState, useContext } from "react";
 import Nav1 from "./navbar";
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 
 const Content = () => {
@@ -27,7 +29,7 @@ const Content = () => {
             <div className={styles.big}>
                 <Nav1 />
                 <div className={styles.cartcontainer}>
-                    <h2>Your Cart</h2>
+                    <h2><FontAwesomeIcon icon={faCartShopping} shake />    Your Cart</h2>
                     <div className={styles.cartitems}>
                         {cartItems.length === 0 ? (
                             <p>Your cart is empty</p>

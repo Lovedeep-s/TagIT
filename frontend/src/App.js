@@ -8,6 +8,7 @@ import Supplier from "./pages/supplier/index.js";
 import Payment from "./pages/payment/index.js";
 import Profile from "./pages/profile/index.js";
 import Products from "./pages/products/index.js";
+import QrLists from "./pages/previous/index.js";
 import { Navigate } from "react-router-dom";
 
 import AuthContext from "./store/auth-context";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/mainpage" element={<MainPage/>}></Route>
           <Route path="/supplier" element={<Supplier/>}></Route>
           <Route path="/payment" element={<Payment/>}></Route>
+          <Route path="/myqrs" element={<QrLists/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/products" element={<Products/>}></Route>
           <Route path="*" element={<Navigate to="/" />} />

@@ -38,7 +38,7 @@ const [posts, setPosts] = useState([]);
         setPhone("");
         setPassword("");
         // console.log('cnajkfn')
-        setMessage("User created successfully");
+        setMessage("Registration Complete!");
        })
        .catch((err) => {
           console.log(err.message);

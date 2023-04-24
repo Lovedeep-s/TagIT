@@ -41,3 +41,24 @@
 .check{
     color: rgb(232,107,121);
 }
+.big{
+    display: flex;
+}
+.inputBoxContainer{
+    /* background-color: rgb(227, 227, 227); */
+    /* border-radius: 3rem; */
+    border: 0px;
+    opacity: 0.6;
+    margin-bottom: 0;
+    width : 40%;
+    text-align: center;
+    /* padding-bottom: 0.5rem; */
+    /* width:80% */
+  }
+  .inputBox::placeholder{
+    /* padding-left: 0rem; */
+    color:black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+  }

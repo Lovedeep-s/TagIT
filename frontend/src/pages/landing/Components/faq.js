@@ -28,34 +28,55 @@ function Faq() {
                     <div className={styles.text}>
                     <p>
                     <FontAwesomeIcon icon={faCheck} className={styles.check} />
-                    <b>Ask some question?</b> <br/>
-                     Also, any geeks can help other geeks by writing articles
-                    on the GeeksforGeeks, 
+                    <b>How do I register for this luggage protection service?</b> <br/>
+                    To register for our service, simply visit our website and 
+                    click on the "Sign Up" button. You'll be prompted to provide some 
+                    basic information, such as your name and contact details. 
+                    Once you've completed the registration process, 
+                    you will be able to Generate a unique QR code that you 
+                    can use to identify your luggage. 
                     <br/>
                     <br/>
                     <FontAwesomeIcon icon={faCheck} className={styles.check}/>
-                    <b>Ask some question?</b>  <br/>
-                     publishing articles follow few
-                    steps that are Articles that need little modification
+                    <b>What if I lose my phone or the QR code becomes unreadable?</b>  <br/>
+                    Don't worry you can always generate a new QR code or Download the QR Again.
                     <br/>
                     <br/>
                     <FontAwesomeIcon icon={faCheck} className={styles.check}/>
-                    <b>Ask some question?</b>  <br/>
-                     improvement from reviewers are published first. To
-                    quickly get your articles reviewed, please refer
+                    <b>What happens if my luggage goes missing?</b>  <br/>
+                    Someone will scan your QR code and will be able 
+                    to contact you.
                     <br/>
                     <br/>
                     <FontAwesomeIcon icon={faCheck} className={styles.check}/>
-                    <b>Ask some question?</b>  <br/>
-                     existing articles, their formatting style, coding
-                    style, and try to make you are close to them.
+                    <b>Is my personal information secure with your service?</b>  <br/>
+                    Yes, we take the privacy and security of our customers very seriously. 
+                    All personal information provided during registration is encrypted and stored securely. 
+                        <br></br><br></br>
+                    <div className={styles.big}>
+        <div className={styles.inputBoxContainer}>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autoComplete="off"
+                    
+                    // onChange={(e) => setName(e.target.value)}
+                    placeholder=" Send Feedback "
+                    className={styles.askq}
+                  />
+                </div>
+                </div>
                     </p>
                     </div>
                 </div>
+                
 
             </div>
         </div>
+        
         </section>
+        
     );
 }
 

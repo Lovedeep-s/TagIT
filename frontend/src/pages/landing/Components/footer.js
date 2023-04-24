@@ -33,23 +33,27 @@ const Footer = () => (
         <hr className={styles.fHrStyle}></hr>
         <div className={styles.fContact}>
             <div className={styles.pNo}>
-                Ph No. : 271-9876
+                Ph No. : 
             </div>
             <div className={styles.pNo}>
               <p>+91 123456789 | Chandravo</p>
               <p>+91 987654321 | Tijil</p>
-              <p>+91 143276598 | Avirat</p>
+              <p>+91 143276598 | Lovedeep</p>
+              <p>+91 143276598 | Devanshi</p>
+              <p>+91 143276598 | Yash</p>
           </div>
         </div>
         <div className={styles.fContact}>
             <div className={styles.pNo}>
-                Email : 
+              Email : 
             </div>
             <div className={styles.pNo}>
               <br></br>
               <p>chandravo@thapar.edu| Chandravo</p>
               <p>tijil@thapar.edu | Tijil</p>
-              <p>avirat@thapar.edu | Avirat</p>
+              <p>Lovedeep@thapar.edu | Lovedeep</p>
+              <p>Devanshi@thapar.edu | Devanshi</p>
+              <p>yash@thapar.edu | Yash</p>
           </div>
         </div>
       </div>
